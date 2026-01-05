@@ -22,11 +22,11 @@ Ao copiar o código acima, você realizará a instalação da distro. Será nece
 ![image](https://github.com/SSputnik82/Guia-de-instala-o-do-FEniCSx-para-Windows/blob/main/Captura%20de%20tela%202026-01-05%20103628.png)
 
 >[!NOTE]
->Tenha certeza que você está usando a versão WSL2. Para saber qual versão você está utilizando copie o seguinte comando no PowerShell.
+>Tenha certeza que você está usando a versão WSL2. Para saber qual a sua versão, copie o seguinte comando no PowerShell.
 > ```
 > wsl --status
 > ```
-> Verifique se a versão padrão é 2, caso não seja defina como padrão:
+> Verifique se a versão padrão é a 2, caso não seja defina como padrão:
 >```
 >wsl --set-default-version 2
 >```
