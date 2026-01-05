@@ -131,6 +131,7 @@ xdmf.write_mesh(domain)
 xdmf.write_function(uh)
 xdmf.close()
 
-
-
 ```
+Resultado visualisado no ParaView:
+<img width="1919" height="994" alt="Captura de tela 2026-01-05 191631" src="https://github.com/user-attachments/assets/38c577e9-632f-4083-8570-e2e2dc22f49a" />
+
