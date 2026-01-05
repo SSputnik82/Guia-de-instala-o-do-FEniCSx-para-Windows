@@ -26,6 +26,16 @@ Ao copiar o código acima, você realizará a instalação da distro. Será nece
 > ```
 > wsl --status
 > ```
-> Se o 
+> Verifique se a versão padrão é 2
+>![Image](https://github.com/SSputnik82/Guia-de-instala-o-do-FEniCSx-para-Windows/blob/main/Captura%20de%20tela%202026-01-05%20105445.png)
 
 # Instalação do FEniCSx
+
+Agora, abra o terminal do Ubuntu, você pode pesquisar por ele na área de pesquisa do próprio Windows ou pode copiar o seguinte comando no PowerShell
+
+```
+wsl ~ -d Ubuntu
+```
+
+Após entrar no ambiente Linux, iremos iniciar a instalação do FEniCSx nele. 
+
