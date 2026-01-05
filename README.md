@@ -1,4 +1,4 @@
-# Guia-de-instalação-do-FEniCSx-para-Windows
+# Guia de instalação do FEniCSx para Windows
 Um guia para a instalação do [FEniCSx 0.10v](https://fenicsproject.org/) para Windows 11. Nesse guia estarei assumindo que você já possua o [python3](https://www.python.org/downloads/) e algum ambiente de desenvolvimento, como o [VSCode](https://code.visualstudio.com/docs/?dv=win64user), instalados. 
 
 # Windows Subsystem for Linux (WSL)
@@ -45,7 +45,7 @@ sudo apt update
 sudo apt install fenicsx
 ```
 
-conforme você for colando as linhas de comando no terminal, ele irá pedir a senha sudo criada anteriormente. Basta digitar ela e apertar Enter. As vezes irá aparecer a opção de [Y/N] que significa sim e não, basta digitar "Y" e seguir com a instalação.
+conforme você for colando as linhas de comando no terminal, ele irá pedir a senha sudo criada anteriormente. Basta digitar ela e apertar Enter. As vezes irá aparecer a opção de [Y/N] que significa sim e não, basta digitar "Y" e apertar Enter para seguir com a instalação.
 
 # Conexão com o VSCode
 
