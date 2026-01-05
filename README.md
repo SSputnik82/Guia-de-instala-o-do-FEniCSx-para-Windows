@@ -1,4 +1,4 @@
-# Guia-de-instala-o-do-FEniCSx-para-Windows
+# Guia-de-instalação-do-FEniCSx-para-Windows
 Um guia para a instalação do [FEniCSx 0.10v](https://fenicsproject.org/) para Windows 11
 
 # Windows Subsystem for Linux (WSL)
