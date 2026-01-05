@@ -40,7 +40,7 @@ Agora, abra o terminal do Ubuntu, você pode pesquisar por ele na área de pesqu
 wsl ~ -d Ubuntu
 ```
 
-Após entrar no ambiente Linux, iremos iniciar a instalação do FEniCSx nele. Copie os seguintes comandos no terminal em ordem.
+Após entrar no ambiente Linux, iremos iniciar a instalação do FEniCSx nele. Copie e cole os seguintes comandos, um de cada vez, no terminal.
 
 ```
 sudo add-apt-repository ppa:fenics-packages/fenics
