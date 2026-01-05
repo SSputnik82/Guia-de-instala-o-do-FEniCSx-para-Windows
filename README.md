@@ -26,7 +26,10 @@ Ao copiar o código acima, você realizará a instalação da distro. Será nece
 > ```
 > wsl --status
 > ```
-> Verifique se a versão padrão é 2.
+> Verifique se a versão padrão é 2, caso não seja defina como padrão:
+>```
+>wsl --set-default-version 2
+>```
 >![Image](https://github.com/SSputnik82/Guia-de-instala-o-do-FEniCSx-para-Windows/blob/main/Captura%20de%20tela%202026-01-05%20105445.png)
 
 # Instalação do FEniCSx
@@ -71,6 +74,62 @@ Para abrir um arquivo a ser visualisado, basta apertar <mark> ctrl + o </mark> e
 
 > [!NOTE]
 > O paraview consegue reconhecer dados por meio de uma variedade de formatos de arquivos. Porém, iremos focar apenas em alguns desses formatos para fins de praticidade.
-> Eles são <mark> .xdmf </mark>, <mark> .pvd </mark> e <mark> .vtm </mark>. Esses dois últimos sendo parte do formato VTK.
+> Eles são <mark> .xdmf </mark>, <mark> .pvd </mark> e <mark> .vtm </mark>. Sendo esses dois últimos parte do formato VTK.
+
+Código teste:
+```python
+#Barra elastica 1D sob tração/compressão
+
+import ufl
+
+from dolfinx import default_scalar_type, io
+from dolfinx.fem import (Constant, Function, functionspace,
+						 dirichletbc, locate_dofs_geometrical)
+from dolfinx.fem.petsc import LinearProblem
+from dolfinx.mesh import create_interval
+
+from mpi4py import MPI
+from ufl import SpatialCoordinate, TestFunction, TrialFunction, dot, dx, ds, grad
+
+import numpy as np
+
+#Variaveis
+E = 1E+4
+c = 1.0
+A = 1.0
+lenght = 1.0
+
+#Malha
+domain = create_interval(MPI.COMM_WORLD, nx=32, points=(0,2*lenght))
+V = functionspace(domain, ("Lagrange", 1))
+u = TrialFunction(V)
+v = TestFunction(V)
 
 
+#Condições de contorno
+def boundary_D(x):
+	return np.isclose(x[0],0)
+
+dofs_D = locate_dofs_geometrical(V,boundary_D)
+bc_D = dirichletbc(default_scalar_type(0), dofs_D, V)
+
+#dx = ufl.Measure("dx", domain=domain)
+x = SpatialCoordinate(domain)
+b = c*x[0]
+t_bar = Constant(domain, default_scalar_type(-c*L**2 / A))
+
+#a = E*u.dx(0)*v.dx(0)*dx
+a = ufl.dot(E*ufl.grad(u),ufl.grad(v))*ufl.dx
+L = b*v*dx + t_bar*v*ds
+
+problem = LinearProblem(a,L,bcs=[bc_D], petsc_options={"ksp_type": "preonly", "pc_type":"lu"})
+uh = problem.solve()
+
+xdmf = io.XDMFFile(domain.comm, "bar_el_1D.xdmf", "w")
+xdmf.write_mesh(domain)
+xdmf.write_function(uh)
+xdmf.close()
+
+
+
+```
