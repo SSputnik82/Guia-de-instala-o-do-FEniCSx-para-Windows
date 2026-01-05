@@ -1,5 +1,5 @@
 # Guia-de-instalação-do-FEniCSx-para-Windows
-Um guia para a instalação do [FEniCSx 0.10v](https://fenicsproject.org/) para Windows 11. Nesse guia estarei assumindo que você já possua o [python3](https://www.python.org/downloads/) e algum ambiente de desenvolvimento, como o [VSCode](https://www.python.org/downloads/), instalados. 
+Um guia para a instalação do [FEniCSx 0.10v](https://fenicsproject.org/) para Windows 11. Nesse guia estarei assumindo que você já possua o [python3](https://www.python.org/downloads/) e algum ambiente de desenvolvimento, como o [VSCode](https://code.visualstudio.com/docs/?dv=win64user), instalados. 
 
 # Windows Subsystem for Linux (WSL)
 
