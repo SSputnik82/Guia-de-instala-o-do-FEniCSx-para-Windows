@@ -12,7 +12,7 @@ Para realizar sua instalação, será necessário abrir o PowerShell no modo adm
 wsl --install
 ```
 
-Após habilitado o WSL, baixe o Ubuntu utilizando o comando:
+Após habilitado o WSL, reinicie o PowerShell e em seguida baixe o Ubuntu utilizando o comando:
 ```
 wsl --install Ubuntu-24.04
 ```
@@ -48,7 +48,7 @@ sudo apt update
 sudo apt install fenicsx
 ```
 
-Conforme você for colando as linhas de comando no terminal, ele irá pedir a senha sudo criada anteriormente. Basta digitar ela e apertar Enter. Às vezes irá aparecer a opção de [Y/N] que significa sim e não, basta digitar "Y" e apertar Enter para seguir com a instalação.
+Conforme você for colando as linhas de comando no terminal, ele irá pedir a senha sudo criada anteriormente. Basta digitar ela e apertar Enter. Às vezes irá aparecer a opção de [Y/N] que significa sim e não, basta digitar "Y" e apertar Enter para seguir com a instalação. Após terminada reinicie o computador.
 
 # Integração com o VSCode
 
@@ -58,6 +58,7 @@ Para utilizar o terminal do Ubuntu no VSCode, basta abrir <mark> View > Terminal
 Após abrir o terminal, procure a opção <mark> Ubuntu (WSL) </mark>.
 <img width="1919" height="1021" alt="Captura de tela 2026-01-05 144825" src="https://github.com/user-attachments/assets/b2a375e6-1693-419d-beb0-ec45c3b41f29" />
 
+<img width="1546" height="213" alt="Captura de tela 2026-01-05 140911" src="https://github.com/user-attachments/assets/d77dfa12-6bb3-4662-b6c7-25d2674d1241" />
 
 Agora você poderá rodar seus códigos digitando no terminal o comando.
 ```
