@@ -62,7 +62,7 @@ Após abrir o terminal, procure a opção <mark> Ubuntu (WSL) </mark>.
 
 Agora você poderá rodar seus códigos digitando no terminal o comando.
 ```
-python3 [Nome_do_codigo.py]
+python3 Nome_do_codigo.py
 ```
 
 
@@ -117,7 +117,7 @@ bc_D = dirichletbc(default_scalar_type(0), dofs_D, V)
 #dx = ufl.Measure("dx", domain=domain)
 x = SpatialCoordinate(domain)
 b = c*x[0]
-t_bar = Constant(domain, default_scalar_type(-c*L**2 / A))
+t_bar = Constant(domain, default_scalar_type(-c*lenght**2 / A))
 
 #a = E*u.dx(0)*v.dx(0)*dx
 a = ufl.dot(E*ufl.grad(u),ufl.grad(v))*ufl.dx
