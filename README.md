@@ -50,8 +50,7 @@ conforme você for colando as linhas de comando no terminal, ele irá pedir a se
 # Integração com o VSCode
 
 Para utilizar o terminal do Ubuntu no VSCode, basta abrir <mark> View > Terminal </mark>, ou clicar no botão de <mark> Run python file </mark>.
-(<img width="1919" height="1017" alt="Captura de tela 2026-01-05 141144" src="https://github.com/user-attachments/assets/4a81b072-2adc-43bf-9483-e0d2af08ff4b" />
-)
+(<img width="1919" height="1017" alt="Captura de tela 2026-01-05 141144" src="https://github.com/user-attachments/assets/4a81b072-2adc-43bf-9483-e0d2af08ff4b" />)
 
 Após abrir o terminal, procure a opção <mark> Ubuntu (WSL) </mark>.
 <img width="1919" height="1022" alt="Captura de tela 2026-01-05 140524" src="https://github.com/user-attachments/assets/e803f5f5-be1b-486a-99ef-823e1d795ae9" />
