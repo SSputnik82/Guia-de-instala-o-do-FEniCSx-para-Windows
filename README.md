@@ -79,6 +79,7 @@ Para abrir um arquivo a ser visualisado, basta apertar <mark> ctrl + o </mark> e
 
 Código teste:
 ```python
+
 #Barra elastica 1D sob tração/compressão
 
 import ufl
@@ -98,10 +99,10 @@ import numpy as np
 E = 1E+4
 c = 1.0
 A = 1.0
-lenght = 1.0
+L= 1.0
 
 #Malha
-domain = create_interval(MPI.COMM_WORLD, nx=32, points=(0,2*lenght))
+domain = create_interval(MPI.COMM_WORLD, nx=32, points=(0,2*L))
 V = functionspace(domain, ("Lagrange", 1))
 u = TrialFunction(V)
 v = TestFunction(V)
@@ -117,7 +118,7 @@ bc_D = dirichletbc(default_scalar_type(0), dofs_D, V)
 #dx = ufl.Measure("dx", domain=domain)
 x = SpatialCoordinate(domain)
 b = c*x[0]
-t_bar = Constant(domain, default_scalar_type(-c*lenght**2 / A))
+t_bar = Constant(domain, default_scalar_type(-c*L**2 / A))
 
 #a = E*u.dx(0)*v.dx(0)*dx
 a = ufl.dot(E*ufl.grad(u),ufl.grad(v))*ufl.dx
@@ -131,7 +132,9 @@ xdmf.write_mesh(domain)
 xdmf.write_function(uh)
 xdmf.close()
 
+
 ```
 Resultado visualisado no ParaView:
-<img width="1919" height="994" alt="Captura de tela 2026-01-05 191631" src="https://github.com/user-attachments/assets/38c577e9-632f-4083-8570-e2e2dc22f49a" />
+<img width="1919" height="989" alt="Captura de tela 2026-01-05 192900" src="https://github.com/user-attachments/assets/f01e96e1-6653-49aa-9f1e-70571a28ba77" />
+
 
