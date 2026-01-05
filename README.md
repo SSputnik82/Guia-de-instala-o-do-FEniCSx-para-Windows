@@ -96,13 +96,13 @@ from ufl import SpatialCoordinate, TestFunction, TrialFunction, dot, dx, ds, gra
 import numpy as np
 
 #Variaveis
-E = 1E+4
+E = 1e+4
 c = 1.0
 A = 1.0
-L= 1.0
+Le = 1.0
 
 #Malha
-domain = create_interval(MPI.COMM_WORLD, nx=32, points=(0,2*L))
+domain = create_interval(MPI.COMM_WORLD, nx=32, points=(0,2*Le))
 V = functionspace(domain, ("Lagrange", 1))
 u = TrialFunction(V)
 v = TestFunction(V)
@@ -118,7 +118,7 @@ bc_D = dirichletbc(default_scalar_type(0), dofs_D, V)
 #dx = ufl.Measure("dx", domain=domain)
 x = SpatialCoordinate(domain)
 b = c*x[0]
-t_bar = Constant(domain, default_scalar_type(-c*L**2 / A))
+t_bar = Constant(domain, default_scalar_type(-c*Le**2 / A))
 
 #a = E*u.dx(0)*v.dx(0)*dx
 a = ufl.dot(E*ufl.grad(u),ufl.grad(v))*ufl.dx
