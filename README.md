@@ -124,7 +124,13 @@ t_bar = Constant(domain, default_scalar_type(-c*L**2 / A))
 a = ufl.dot(E*ufl.grad(u),ufl.grad(v))*ufl.dx
 L = b*v*dx + t_bar*v*ds
 
-problem = LinearProblem(a,L,bcs=[bc_D], petsc_options={"ksp_type": "preonly", "pc_type":"lu"})
+problem = LinearProblem(a, L, bcs=[bc_D],
+    petsc_options_prefix="basic_linear_problem",
+    petsc_options= {
+      "ksp_type": "preonly",
+      "pc_type": "lu",
+      "pc_factor_mat_solver_type": "mumps"
+})
 uh = problem.solve()
 
 xdmf = io.XDMFFile(domain.comm, "bar_el_1D.xdmf", "w")
