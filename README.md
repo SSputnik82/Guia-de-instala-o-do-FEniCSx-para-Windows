@@ -12,7 +12,7 @@ Para realizar sua instalação, será necessário abrir o PowerShell no modo adm
 wsl --install
 ```
 
-Após habilitado o WSL, iremos baixar o Ubuntu
+Após habilitado o WSL, baixe o Ubuntu utilizando o comando:
 ```
 wsl --install Ubuntu-24.04
 ```
