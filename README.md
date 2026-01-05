@@ -47,6 +47,30 @@ sudo apt install fenicsx
 
 conforme você for colando as linhas de comando no terminal, ele irá pedir a senha sudo criada anteriormente. Basta digitar ela e apertar Enter. As vezes irá aparecer a opção de [Y/N] que significa sim e não, basta digitar "Y" e apertar Enter para seguir com a instalação.
 
-# Conexão com o VSCode
+# Integração com o VSCode
 
-Agora precisamos 
+Para utilizar o terminal do Ubuntu no VSCode, basta abrir <mark> View > Terminal </mark>, ou clicar no botão de <mark> Run python file </mark>.
+(<img width="1919" height="1017" alt="Captura de tela 2026-01-05 141144" src="https://github.com/user-attachments/assets/4a81b072-2adc-43bf-9483-e0d2af08ff4b" />
+)
+
+Após abrir o terminal, procure a opção <mark> Ubuntu (WSL) </mark>.
+<img width="1919" height="1022" alt="Captura de tela 2026-01-05 140524" src="https://github.com/user-attachments/assets/e803f5f5-be1b-486a-99ef-823e1d795ae9" />
+
+Agora você poderá rodar seus códigos digitando no terminal o comando.
+```
+python3 [Nome_do_codigo.py]
+```
+<img width="1546" height="213" alt="Captura de tela 2026-01-05 140911" src="https://github.com/user-attachments/assets/1988fe82-b564-4cdf-9fe6-c65330cda1b8" />
+
+
+# ParaView
+Ele é um aplicativo de código aberto para visualização interativa das simulações que realizaremos no FEniCSx. Sua maior vantajem é a sua capacidade de permitir a computação paralela para problemas que requerem alta demanda computacional. Para realizar sua instalação, basta ir em seu site, ir para Downloads e baixar a versão mais recente: [ParaView](https://www.paraview.org/).
+
+Para abrir um arquivo a ser visualisado, basta apertar <mark> ctrl + o </mark> e procurar o diretório do seu arquivo.
+
+<img width="1919" height="994" alt="Captura de tela 2026-01-05 142347" src="https://github.com/user-attachments/assets/0e408905-95c7-4303-ba77-87a732e95e79" />
+
+> [!NOTE]
+> O paraview consegue reconhecer dados por meio de uma variedade de formatos de arquivos. Porém, iremos focar apenas em alguns desses formatos para fins de praticidade.
+> Eles são <mark> .xdmf </mark>, <mark> .pvd </mark> e <mark> .vtm </mark>. Esses dois últimos sendo parte do formato VTK.
+
