@@ -12,12 +12,18 @@ Para realizar sua instalação, será necessário abrir o PowerShell no modo adm
 wsl --install
 ```
 
-Após habilitado o WSL, reinicie o PowerShell e em seguida baixe o Ubuntu utilizando o comando:
+Após habilitado o WSL, reinicie o computador e em seguida baixe o Ubuntu utilizando o comando:
 ```
 wsl --install Ubuntu-24.04
 ```
 
 Ao copiar o código acima, você realizará a instalação da distro. Será necessário definir o nome e a senha para o usuário sudo do novo sistema, então escolha uma senha de fácil acesso na qual você se lembrará depois.
+>[!NOTE]
+>Importante destacar que no momento em que você colocar a senha, ela aparecerá invisível. Não se preocupe e continue digitando normalmente pois ela está sendo escrita.
+>Caso você cometa um erro e queria refazer a instalação, copie e cole o comando no PowerShell:
+>```
+>wsl --unregister Ubuntu-24.04
+>```
 
 ![image](https://github.com/SSputnik82/Guia-de-instala-o-do-FEniCSx-para-Windows/blob/main/Captura%20de%20tela%202026-01-05%20103628.png)
 
@@ -67,7 +73,10 @@ python3 Nome_do_codigo.py
 
 
 # ParaView
-Ele é um aplicativo de código aberto para visualização interativa das simulações que realizaremos no FEniCSx. Sua maior vantajem é a sua capacidade de permitir a computação paralela para problemas que requerem alta demanda computacional. Para realizar sua instalação, basta ir em seu site, ir para Downloads e baixar a versão mais recente: [ParaView](https://www.paraview.org/).
+Ele é um aplicativo de código aberto para visualização interativa das simulações que realizaremos no FEniCSx. Sua maior vantajem é a sua capacidade de permitir a computação paralela para problemas que requerem alta demanda computacional. Para realizar sua instalação, basta ir em seu site, ir para Downloads e baixar a versão no formato <mark> AMD64.msi </mark> mais recente: [ParaView](https://www.paraview.org/).
+<img width="1919" height="657" alt="Captura de tela 2026-01-05 210111" src="https://github.com/user-attachments/assets/23c1885a-6682-493e-b61a-3a201dc2369b" />
+
+
 
 Para abrir um arquivo a ser visualisado, basta apertar <mark> ctrl + o </mark> e procurar o diretório do seu arquivo.
 
@@ -77,7 +86,7 @@ Para abrir um arquivo a ser visualisado, basta apertar <mark> ctrl + o </mark> e
 > O paraview consegue reconhecer dados por meio de uma variedade de formatos de arquivos. Porém, iremos focar apenas em alguns desses formatos para fins de praticidade.
 > Eles são <mark> .xdmf </mark>, <mark> .pvd </mark> e <mark> .vtm </mark>. Sendo esses dois últimos parte do formato VTK.
 
-Código teste:
+# Código teste:
 ```python
 
 #Barra elastica 1D sob tração/compressão
@@ -140,7 +149,12 @@ xdmf.close()
 
 
 ```
-Resultado visualisado no ParaView:
+Ao rodar o código seu terminal ficará assim:
+<img width="1919" height="140" alt="Captura de tela 2026-01-05 210351" src="https://github.com/user-attachments/assets/298b5c59-df22-4cab-8e39-a9a145f7ff02" />
+
+Agora abra o ParaView, aperte <mark> ctrl + o </mark> e procure o arquivo salvo com nome de <mark> bar_el_1D.xdmf </mark>. Em seguida escolha um dos leitores de arquivo e clique em <mark> Apply </mark>
+
+
 <img width="1919" height="989" alt="Captura de tela 2026-01-05 192900" src="https://github.com/user-attachments/assets/f01e96e1-6653-49aa-9f1e-70571a28ba77" />
 
 
