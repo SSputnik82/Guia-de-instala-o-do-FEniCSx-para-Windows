@@ -64,12 +64,28 @@ Para utilizar o terminal do Ubuntu no VSCode, basta abrir <mark> View > Terminal
 Após abrir o terminal, procure a opção <mark> Ubuntu (WSL) </mark>.
 <img width="1919" height="1021" alt="Captura de tela 2026-01-05 144825" src="https://github.com/user-attachments/assets/b2a375e6-1693-419d-beb0-ec45c3b41f29" />
 
+Agora você poderá rodar seus códigos digitando no terminal da seguinte forma:
+```
+python3 nome_do_seu_codigo.py
+```
+
 <img width="1546" height="213" alt="Captura de tela 2026-01-05 140911" src="https://github.com/user-attachments/assets/d77dfa12-6bb3-4662-b6c7-25d2674d1241" />
 
-Agora você poderá rodar seus códigos digitando no terminal o comando.
-```
-python3 Nome_do_codigo.py
-```
+## Troubleshooting
+>[!TIP]
+>Um dos possíveis problemas que podem aparecer é:
+><img width="1919" height="161" alt="Captura de tela 2026-01-05 212142" src="https://github.com/user-attachments/assets/bc18aa75-36c3-402b-af2e-f17dd4fd9fe5" />
+>
+>Esse erro significa que seu terminal não está no mesmo diretório, ou pasta, que o seu arquivo. Para corrigir isso é preciso que você procure onde ele foi salvo no Windows. 
+>```
+>C:\Users\tsuno\Desktop\FEniCSx
+>```
+>No Ubuntu, utilizamos o comando <mark> cd </mark> para nos movermos entre diretórios. Porém, como nosso arquivo existe no sistema Windows, a forma de conectar ambos os ambientes é utilizando o comando <mark> mnt </mark>. Estaremos "montando" o diretório do Windows no sistema Linux. Lembrando que o diretório muda de usuário para usuário, portanto você deverá digitar no seu terminal o diretório pertinente à sua pasta:
+>```
+>cd /mnt/c/Users/tsuno/Desktop/FEniCSx
+>```
+><img width="1917" height="191" alt="Captura de tela 2026-01-05 213746" src="https://github.com/user-attachments/assets/8e8b37f0-7b58-4357-a398-d825fda333d0" />
+
 
 
 # ParaView
@@ -83,10 +99,10 @@ Para abrir um arquivo a ser visualisado, basta apertar <mark> ctrl + o </mark> e
 <img width="1919" height="994" alt="Captura de tela 2026-01-05 142347" src="https://github.com/user-attachments/assets/0e408905-95c7-4303-ba77-87a732e95e79" />
 
 > [!NOTE]
-> O paraview consegue reconhecer dados por meio de uma variedade de formatos de arquivos. Porém, iremos focar apenas em alguns desses formatos para fins de praticidade.
+> O paraview consegue reconhecer dados por meio de uma variedade de formatos de arquivos. Porém, iremos focar apenas em alguns para fins de praticidade.
 > Eles são <mark> .xdmf </mark>, <mark> .pvd </mark> e <mark> .vtm </mark>. Sendo esses dois últimos parte do formato VTK.
 
-# Código teste:
+# Código teste
 ```python
 
 #Barra elastica 1D sob tração/compressão
